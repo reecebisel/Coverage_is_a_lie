@@ -30,16 +30,6 @@ export const themes = [ future, highlight ]
 # Coverage != Quality
 
 ---
-<Highlighter language='ruby'>
-{ `def test_excel_endpoint
-   get :excel_single,
-       company_id: @company.id,
-       report: 'exit_distributions'
-   assert_equal(response.status, 200)
-end` }
-</Highlighter>
-
----
 # Clarify
 
 ---
@@ -61,9 +51,70 @@ Something is better than nothing
   <Appear>
     <li>No Bugs</li>
     <li>No Edgecases</li>
+    <li>World Peace</li>
   </Appear>
 </ul>
 
 ---
 It only means you executed 100% of your code
 
+---
+# An example
+
+---
+<Highlighter language='ruby'>
+{ `test 'excel_endpoint' do
+   get :excel_single,
+       company_id: @company.id,
+       report: 'exit_distributions'
+   assert_equal(response.status, 200)
+end` }
+</Highlighter>
+
+---
+## But what if
+you have 30+ reports that are untested?
+
+---
+<Highlighter language='ruby'>
+{ `reports.each do |report|
+  test "export excel for #{report}" do
+    get :excel_single,
+        company_id: @company.id,
+        report:     report
+   assert_equal(response.status, 200)
+  end
+end` }
+</Highlighter>
+
+---
+<Image
+  src="https://media.giphy.com/media/3o7TKFvAdiVLqgrWNi/giphy.gif"
+  size='contain'
+/>
+
+# That test is hot garbage
+But it added coverage
+
+---
+# Even though they aren't good tests it provided a lot of coverage
+
+---
+What _can_ this show us?
+
+---
+<ul>
+  <Appear>
+    <li>Domain lines</li>
+    <li>Data heavy processes</li>
+  </Appear>
+</ul>
+
+---
+<Image
+  src="https://media.giphy.com/media/hwTWG731ye8kU/giphy.gif"
+  size='contain'
+/>
+
+---
+# End
