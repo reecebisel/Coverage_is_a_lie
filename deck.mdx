@@ -30,14 +30,14 @@ export const themes = [ future, highlight ]
 # Coverage != Quality
 
 ---
-## Examples
-```ruby
-def test_excel_endpoint
-  get :excel_single, company_id: @company.id, report: 'exit_distributions'
-
-  assert_equal(response.status, 200)
-end
-```
+<Highlighter language='ruby'>
+{ `def test_excel_endpoint
+   get :excel_single,
+       company_id: @company.id,
+       report: 'exit_distributions'
+   assert_equal(response.status, 200)
+end` }
+</Highlighter>
 
 ---
 # Clarify
@@ -45,3 +45,25 @@ end
 ---
 # Coverage is Coverage
 Something is better than nothing
+
+---
+<Image
+  src="https://media1.giphy.com/media/3oz8xM0mLv9qOooZY4/giphy-downsized.gif?cid=6104955ed5b08024d6df7ca1813322f5afe2d08c2fc33fec&rid=giphy-downsized.gif"
+  size='contain'
+/>
+
+## Don't be fooled
+
+---
+### 100% coverage doesn't mean
+
+<ul>
+  <Appear>
+    <li>No Bugs</li>
+    <li>No Edgecases</li>
+  </Appear>
+</ul>
+
+---
+It only means you executed 100% of your code
+
