@@ -1,0 +1,47 @@
+import {
+  Head, Image, Notes, Appear,
+  Invert, Split, SplitRight, FullScreenCode, Horizontal
+} from 'mdx-deck'
+import { future, dark, comic, yellow } from '@mdx-deck/themes'
+import highlight from '@mdx-deck/themes/syntax-highlighter-prism'
+import Highlighter from 'react-syntax-highlighter'
+export const themes = [ future, highlight ]
+
+# Let's Get Salty
+
+---
+## Test Coverage is a lie
+
+---
+## :sunglasses: End :sunglasses:
+
+---
+<Image
+  src='https://media3.giphy.com/media/qxtxlL4sFFle/giphy-downsized.gif?cid=6104955e7f439c544f5f6941ad369eeeb4b506bc4f183c31&rid=giphy-downsized.gif'
+  size='contain'/>
+
+## ...What?
+
+---
+# Kidding
+(Mostly)
+
+---
+# Coverage != Quality
+
+---
+## Examples
+```ruby
+def test_excel_endpoint
+  get :excel_single, company_id: @company.id, report: 'exit_distributions'
+
+  assert_equal(response.status, 200)
+end
+```
+
+---
+# Clarify
+
+---
+# Coverage is Coverage
+Something is better than nothing
