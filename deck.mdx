@@ -5,12 +5,13 @@ import {
 import { future, dark, comic, yellow } from '@mdx-deck/themes'
 import highlight from '@mdx-deck/themes/syntax-highlighter-prism'
 import Highlighter from 'react-syntax-highlighter'
+import boog from './images/boogs.png'
 export const themes = [ future, highlight ]
 
 # Testing a Legacy
----
-
-# Let's Get Salty
+<Appear>
+  <h4>Let's Get Salty</h4>
+</Appear>
 
 ---
 # Test Coverage is a lie
@@ -30,7 +31,9 @@ export const themes = [ future, highlight ]
 
 ---
 # Kidding
-(Mostly)
+<Appear>
+  <h4>(Mostly)</h4>
+</Appear>
 
 ---
 # Coverage != Quality
@@ -70,6 +73,25 @@ It only means you executed 100% of your code
 # An example
 
 ---
+# The bug
+
+<div style="width: 80%; height: 25%;">
+  <Image src={boog} size="contain" />
+</div>
+
+---
+# The Fix
+
+<div style="width: 80%; font-size: 35px;">
+  <Highlighter language='ruby'>
+    { `sheet.add_image(image_src: "#{Rails.root}/app/assets/images/svg/shareworks_logo.svg") do |image|
+sheet.add_image(image_src: "#{Rails.root}/app/assets/images/shareworks_logo.png") do |image|` }
+  </Highlighter>
+</div>
+
+---
+## The test
+
 <Highlighter language='ruby'>
 { `test 'excel_endpoint' do
    get :excel_single,
@@ -103,7 +125,14 @@ end` }
   size='contain'
 />
 
-## But it added coverage
+#
+
+---
+# But it added [coverage](https://codeclimate.com/repos/5d0d086d5cf1ae0164011ebe/progress/coverage)
+
+<Appear>
+  <h4>About 10% total</h4>
+</Appear>
 
 ---
 # Even though they aren't good tests it provided a lot of coverage
